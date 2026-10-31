@@ -8,7 +8,7 @@ The channel, its Clebsch–Gordan component formula, the overhang-defect bound, 
 
 ## 1. Statement of the theorem
 
-Let $`d\ge2`$, $`N\ge1`$, and $`0\le k<N/2`$ be integers. Write
+Let $`d\ge2`$, $`N\ge1`$, and $`0\le k\lt N/2`$ be integers. Write
 
 ```math
 m=N-k,
@@ -29,7 +29,7 @@ F^\star_{N,k,d}
 
 where $`\Lambda`$ maps $`N`$ registers of dimension $`d`$ to one such register. Fidelity here is the overlap with the pure target, without a square root.
 
-**Theorem.** The single channel $`\Phi_{N,d}`$ of [recovery-channel.md](recovery-channel.md) is optimal for every $`k<N/2`$, and
+**Theorem.** The single channel $`\Phi_{N,d}`$ of [recovery-channel.md](recovery-channel.md) is optimal for every $`k\lt N/2`$, and
 
 ```math
 \boxed{
@@ -42,7 +42,7 @@ F^\star_{N,k,d}=F_N(k)
 \tag{1}
 ```
 
-Use the convention $`\binom Nt=0`$ for $`t<0`$ or $`t>N`$. The theorem holds for even and odd $`N`$. The channel does not need to know $`m`$ or $`k`$.
+Use the convention $`\binom Nt=0`$ for $`t\lt0`$ or $`t>N`$. The theorem holds for even and odd $`N`$. The channel does not need to know $`m`$ or $`k`$.
 
 An equivalent expression is obtained from a uniformly random word of $`m`$ good symbols and $`k`$ bad symbols. Give a good symbol increment $`-1`$ and a bad symbol increment $`+1`$, and let $`M`$ be the maximum partial sum, including the initial zero. Then
 
@@ -63,7 +63,9 @@ The same value is optimal for the promise of at most $`k`$ faults. Sections 2 th
 Fix a bad partition $`\nu\vdash k`$, with $`\ell(\nu)\le d-1`$. By [sector-reduction.md](sector-reduction.md), the input reduces to a mixture of supported pairs $`(\lambda,\nu)`$, where $`\lambda/\nu`$ is a horizontal $`m`$-strip, with probability
 
 ```math
-p(\lambda\mid\nu)=\frac{f^\lambda}{\binom Nm f^\nu}.
+\begin{aligned}
+p(\lambda\mid\nu)&=\frac{f^\lambda}{\binom Nm f^\nu}.
+\end{aligned}
 \tag{3}
 ```
 
@@ -78,10 +80,12 @@ satisfies $`0\le r\le k`$ and $`\lambda_1-\lambda_2\ge g+2r>0`$.
 The inherited branch fidelity, specialized to one output and first-row removal, is
 
 ```math
+\begin{aligned}
 a_{\lambda,\nu}
-=\prod_{i=1}^{d-1}
+&=\prod_{i=1}^{d-1}
 \frac{\lambda_1-\nu_i+i-1}
 {\lambda_1-\lambda_{i+1}+i-1}.
+\end{aligned}
 \tag{4}
 ```
 
@@ -107,9 +111,11 @@ D_i\ge\lambda_1-\lambda_2\ge g+2r.
 The product inequality $`1-\prod_i(1-x_i)\le\sum_i x_i`$ for $`0\le x_i\le1`$ yields
 
 ```math
+\begin{aligned}
 1-a_{\lambda,\nu}
-\le\sum_{i=1}^{d-1}\frac{b_i}{D_i}
-\le\frac{r}{g+2r}.
+&\le\sum_{i=1}^{d-1}\frac{b_i}{D_i}\\
+&\le\frac{r}{g+2r}.
+\end{aligned}
 \tag{5}
 ```
 
@@ -123,14 +129,16 @@ The RSK correspondence is a bijection between words and pairs $`(P,Q)`$ of the s
 
 ### Restriction lemma
 
-For a word $`w`$, let $`w_{<d}`$ be the word obtained by deleting every occurrence of $`d`$. Let $`P(w)_{<d}`$ be the insertion tableau with its boxes labeled $`d`$ deleted. Then
+For a word $`w`$, let $`w_{\lt d}`$ be the word obtained by deleting every occurrence of $`d`$. Let $`P(w)_{\lt d}`$ be the insertion tableau with its boxes labeled $`d`$ deleted. Then
 
 ```math
-P(w)_{<d}=P(w_{<d}).
+\begin{aligned}
+P(w)_{\lt d}&=P(w_{\lt d}).
+\end{aligned}
 \tag{6}
 ```
 
-**Proof.** Proceed through the letters of $`w`$ and compare the insertion processes. Inserting $`d`$ appends it to the first row, so the restriction to smaller letters is unchanged. When inserting $`x<d`$, every bump of an entry smaller than $`d`$ agrees with the insertion process in the restricted tableau. At the first row where the restricted process would append a letter and stop, the full process either also appends it, or replaces the first $`d`$ in that row. In the second case the bumped $`d`$ appends to the next row. This last change disappears on restricting to letters smaller than $`d`$. Thus both restricted tableaux agree after each insertion, proving (6).
+**Proof.** Proceed through the letters of $`w`$ and compare the insertion processes. Inserting $`d`$ appends it to the first row, so the restriction to smaller letters is unchanged. When inserting $`x\lt d`$, every bump of an entry smaller than $`d`$ agrees with the insertion process in the restricted tableau. At the first row where the restricted process would append a letter and stop, the full process either also appends it, or replaces the first $`d`$ in that row. In the second case the bumped $`d`$ appends to the next row. This last change disappears on restricting to letters smaller than $`d`$. Thus both restricted tableaux agree after each insertion, proving (6).
 
 ### Construction of the coupling
 
@@ -145,7 +153,7 @@ There are exactly $`f^\nu\binom Nk`$ equally likely choices. Different choices g
 
 ```math
 \Omega(P_0,m)
-=\{w:\#\{t:w_t=d\}=m,\ P(w_{<d})=P_0\}.
+=\{w:\#\{t:w_t=d\}=m,\ P(w_{\lt d})=P_0\}.
 ```
 
 By (6), the full insertion tableau restricts to $`P_0`$. Its additional boxes are all labeled $`d`$. Strict increase down columns means that no column contains two added boxes. Hence its shape $`\lambda`$ satisfies the horizontal-strip condition.
@@ -155,9 +163,11 @@ Conversely, for each horizontal strip $`\lambda/\nu`$ of size $`m`$, there is ex
 For every standard tableau $`Q`$ of shape $`\lambda`$, inverse RSK of this full insertion tableau and $`Q`$ produces a word in $`\Omega(P_0,m)`$, again by (6). There are therefore exactly $`f^\lambda`$ constructed words of shape $`\lambda`$. It follows that
 
 ```math
-\Pr(\operatorname{shape}(P(w))=\lambda)
-=\frac{f^\lambda}{\binom Nk f^\nu}
-=p(\lambda\mid\nu).
+\begin{aligned}
+\Pr(\mathrm{shape}(P(w))=\lambda)
+&=\frac{f^\lambda}{\binom Nk f^\nu}\\
+&=p(\lambda\mid\nu).
+\end{aligned}
 \tag{7}
 ```
 
@@ -194,9 +204,11 @@ for every word in the coupling. This is a pathwise comparison, rather than a com
 Define $`h_g(x)=x/(g+2x)`$ for $`x\ge0`$. Since $`g>0`$, this function is increasing. Combining (5), (7), and (8) gives, separately for every bad partition,
 
 ```math
+\begin{aligned}
 \sum_\lambda p(\lambda\mid\nu)(1-a_{\lambda,\nu})
-\le\mathbb E[h_g(r)]
-\le\mathbb E[h_g(M)].
+&\le\mathbb E[h_g(r)]\\
+&\le\mathbb E[h_g(M)].
+\end{aligned}
 \tag{9}
 ```
 
@@ -213,16 +225,20 @@ This transformation is a bijection onto all paths with those new increment count
 There are $`\binom Nk`$ original paths and $`\binom N{k-s}`$ reflected paths. Thus
 
 ```math
-\Pr(M\ge s)=\frac{\binom N{k-s}}{\binom Nk}.
+\begin{aligned}
+\Pr(M\ge s)&=\frac{\binom N{k-s}}{\binom Nk}.
+\end{aligned}
 \tag{10}
 ```
 
 Taking the difference of consecutive tails, with the tail at zero equal to one and the tail at $`k+1`$ equal to zero, gives
 
 ```math
+\begin{aligned}
 \Pr(M=r)
-=\frac{\binom N{k-r}-\binom N{k-r-1}}{\binom Nk},
+&=\frac{\binom N{k-r}-\binom N{k-r-1}}{\binom Nk},
 \qquad 0\le r\le k.
+\end{aligned}
 \tag{11}
 ```
 
@@ -254,9 +270,11 @@ There are at most two rows because the word uses only two letters. In (4), only 
 Both inequalities in (9) are equalities. Consequently
 
 ```math
+\begin{aligned}
 \inf_{\|\psi\|=1}\inf_{\rho\in\mathcal A_{\psi,N,k}}
 \langle\psi|\Phi_{N,d}(\rho)|\psi\rangle
-=F_N(k).
+&=F_N(k).
+\end{aligned}
 \tag{12}
 ```
 
@@ -291,9 +309,11 @@ J=\frac N2-j.
 In the Schur decomposition, $`\lambda=(N-j,j)`$ carries spin $`J`$. Its magnetic-weight-$`z`$ subspace is one-dimensional when $`0\le j\le k`$ and absent otherwise. The averaged input is therefore a mixture of the pure spin states $`|J,z\rangle`$, with a maximally mixed Specht factor and probabilities
 
 ```math
-p_j=\frac{f^{(N-j,j)}}{\binom Nk}
-=\frac{\binom Nj-\binom N{j-1}}{\binom Nk},
+\begin{aligned}
+p_j&=\frac{f^{(N-j,j)}}{\binom Nk}\\
+&=\frac{\binom Nj-\binom N{j-1}}{\binom Nk},
 \qquad 0\le j\le k.
+\end{aligned}
 \tag{13}
 ```
 
@@ -316,9 +336,10 @@ The partial trace of the spin-$`L`$ projector is $`(2L+1)/(2J+1)`$ times the inp
 The Clebsch–Gordan coefficients give the target-up output probabilities
 
 ```math
-A_-(J,z)=\frac{J+z}{2J},
-\qquad
-A_+(J,z)=\frac{J-z+1}{2J+2}.
+\begin{aligned}
+A_-(J,z)&=\frac{J+z}{2J},\\
+A_+(J,z)&=\frac{J-z+1}{2J+2}.
+\end{aligned}
 \tag{14}
 ```
 
@@ -358,7 +379,7 @@ Given any $`d`$-dimensional output channel $`\Lambda_d`$, construct a qubit chan
 
 ```math
 \mathcal R_V(Y)
-=V^\dagger YV+\operatorname{Tr}((I-P)Y)\,\tau,
+=V^\dagger YV+\mathrm{Tr}((I-P)Y)\,\tau,
 ```
 
 where $`\tau`$ is any fixed qubit density operator. This map is CPTP: it preserves the component in the embedded qubit subspace and replaces the probability outside that subspace by $`\tau`$.
@@ -368,7 +389,7 @@ For every target qubit $`|u\rangle`$ and output $`Y`$,
 ```math
 \langle u|\mathcal R_V(Y)|u\rangle
 =\langle Vu|Y|Vu\rangle
-+\operatorname{Tr}((I-P)Y)\langle u|\tau|u\rangle
++\mathrm{Tr}((I-P)Y)\langle u|\tau|u\rangle
 \ge\langle Vu|Y|Vu\rangle.
 ```
 
@@ -376,7 +397,7 @@ Thus a $`d`$-dimensional channel with worst-case fidelity larger than $`F_N(k)`$
 
 ## 8. One channel for every fault count and the at-most promise
 
-The recovery channel chooses its removal corner from $`\lambda`$ alone. Neither $`k`$ nor $`m`$ appears in that choice. For every strict-majority promise, the supported sectors satisfy $`\lambda_1>\lambda_2`$ by the sector-reduction theorem, so the selected corner is in the first row. The same channel $`\Phi_{N,d}`$ therefore attains (1) simultaneously for all $`0\le k<N/2`$.
+The recovery channel chooses its removal corner from $`\lambda`$ alone. Neither $`k`$ nor $`m`$ appears in that choice. For every strict-majority promise, the supported sectors satisfy $`\lambda_1>\lambda_2`$ by the sector-reduction theorem, so the selected corner is in the first row. The same channel $`\Phi_{N,d}`$ therefore attains (1) simultaneously for all $`0\le k\lt N/2`$.
 
 To pass to an upper bound on the fault count, first show that $`\varepsilon_{N,k}`$ is nondecreasing in $`k`$. Choose a uniformly random permutation of the $`N`$ positions and declare its first $`\ell`$ positions bad. This couples uniform bad sets $`B^{(\ell)}`$ for all $`\ell`$, with
 

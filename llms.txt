@@ -14,6 +14,14 @@ This repository studies recovery of one unknown pure quantum state from a strict
 3. science/minimax-proof.md constructs the exact fixed-tableau RSK coupling, proves binary domination, identifies equality and establishes the unrestricted-dimensional converse.
 4. science/accuracy-and-boundaries.md derives the margin regimes and the sharp failure of amplification under arbitrary coherent fault-location superpositions.
 
+## Study route
+
+- learning/README.md: entry routes and how the common learning material fits together.
+- learning/watrous-bridge.md: the single educational anchor, John Watrous, The Theory of Quantum Information (2018); relevant sections, notation translation, a three-register example and the missing Schur/Pieri/RSK steps.
+- learning/milestones.md: exactly 30 project-defined understanding targets, with 13 background/preliminaries and 17 narrative/innovation milestones, ordered dependencies and scientific source pointers.
+
+The anchor supports the project map; it is not a requirement to read the entire textbook. Research citations identify imported ingredients and do not create additional educational anchors.
+
 ## Retrieve by question
 
 - Why can faulty registers be entangled? Use sector-reduction.md, especially the two twirls and normalized conditional state.
@@ -25,12 +33,16 @@ This repository studies recovery of one unknown pure quantum state from a strict
 - Can fault locations be coherent? Use the coherent-occupation theorem in accuracy-and-boundaries.md.
 - What costs are charged? Use recovery-channel.md; copy complexity, data storage, auxiliary workspace and gate precision are distinct.
 - How are formulas reproduced? Run python3 verification/run_all.py and read verification/README.md.
+- How does Watrous fidelity translate? Use learning/watrous-bridge.md: its root fidelity is squared to obtain this project's pure-target overlap.
+- What background is absent from the selected anchor sections? Use learning/watrous-bridge.md for arbitrary Schur sectors, representation dimensions, the two Pieri roles and the fixed-tableau RSK construction.
 
 ## Essential distinctions
 
 Fidelity is the pure-target overlap, without a square root. Every fixed-placement component has actual pure good registers and faults supported in the tensor power of the target's orthogonal complement. Mixtures preserve the same target. Arbitrary coherent fixed-occupation states form a larger class with a different minimax value.
 
 The exact qubit sequence, three-input qudit benchmark, extraction channel, component product, scalar bound and Schur/RSK foundations are attributed prior work. The additional conclusion is exact minimax universality over arbitrary faulty symmetry sectors. Finite checks corroborate the formulas and coupling; they do not replace the general proof.
+
+Channel performance and the unrestricted converse are separate proof obligations. Every input preparation is counted. Dimension-independent optimal fidelity does not remove collective storage or circuit costs. The fixed-positive-fault-fraction copy law, fixed-fault asymptotic and small-margin regime have different hypotheses.
 
 ## References
 

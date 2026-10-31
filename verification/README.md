@@ -24,7 +24,7 @@ Committed results match.
 
 ## Exact rational sector calculations
 
-The first suite covers every $`1\le N\le18`$, every strict-majority fault count $`0\le k<N/2`$, every $`2\le d\le\min(N+1,8)`$, and every bad partition $`\nu\vdash k`$ with at most $`d-1`$ rows. For each case it enumerates all $`\lambda\vdash N`$ with at most $`d`$ rows such that $`\lambda/\nu`$ is a horizontal strip. Trailing zero rows are included in the interlacing test.
+The first suite covers every $`1\le N\le18`$, every strict-majority fault count $`0\le k\lt N/2`$, every $`2\le d\le\min(N+1,8)`$, and every bad partition $`\nu\vdash k`$ with at most $`d-1`$ rows. For each case it enumerates all $`\lambda\vdash N`$ with at most $`d`$ rows such that $`\lambda/\nu`$ is a horizontal strip. Trailing zero rows are included in the interlacing test.
 
 Specht dimensions in this suite are computed with the hook-length formula. The suite evaluates the conditional law
 

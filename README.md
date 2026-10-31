@@ -6,7 +6,7 @@ This project establishes an exact recovery law. Of $`N=m+k`$ registers in dimens
 
 The optimal worst-case fidelity is **exactly the qubit benchmark in every dimension**. Identical pure orthogonal faults already realize the worst case. The channel is inherited from quantum purity amplification; the result here is its sharp guarantee for every faulty symmetry sector and the matching unrestricted converse.
 
-The promise permits classical mixtures of fault locations. Coherent superpositions of those locations lead to a different answer.
+Fidelity means the pure-target overlap $`F=\langle\psi|\rho_{\rm out}|\psi\rangle`$, without a square root. The promise permits classical mixtures of fault locations. Coherent superpositions of those locations lead to a different answer.
 
 ## Principal results
 
@@ -16,7 +16,8 @@ Let $`g=m-k=N-2k>0`$, and let $`M`$ be the maximum partial sum of a uniformly ra
 \varepsilon_{N,k}
 =\mathbb E\frac{M}{g+2M},
 \qquad
-\Pr(M\ge r)=\frac{\binom N{k-r}}{\binom Nk}.
+\Pr(M\ge r)=\frac{\binom N{k-r}}{\binom Nk},
+\qquad 1\le r\le k.
 ```
 
 The same channel is optimal for every strict-majority count, for even or odd $`N`$, and for an upper bound on the number of faults. It needs no target description or fault locations.
@@ -46,6 +47,12 @@ Start with the [model and exact theorem](science/model.md). The proof has two ma
 | Exact finite checks and their limits | [Verification](verification/README.md) |
 
 The [LLM reading guide](llms.txt) maps questions to these authoritative files.
+
+## Learn the project
+
+The single educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**. Start with the [learning route](learning/README.md), then use the [Watrous bridge](learning/watrous-bridge.md) alongside the [30-milestone map](learning/milestones.md).
+
+The bridge develops the operational model from states, channels, fidelity and symmetry. It then supplies the representation-theoretic and combinatorial steps needed for this recovery theorem, including a complete three-register example. The milestone map connects the prerequisites to the proof, the sharp converse, the majority-margin regimes and the cost of implementing the channel. Its understanding targets are common to every reader.
 
 ## Reproduce the checks
 
