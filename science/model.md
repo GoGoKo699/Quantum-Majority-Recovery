@@ -16,7 +16,7 @@ Here $`m`$ is the number of good registers and $`k`$ is the number of faults. Wr
 
 ```math
 \mathcal A_{\psi,N,k}
-=\operatorname{conv}\!\left\{
+=\mathrm{conv}\!\left\{
 U_\pi\left(P_\psi^{\otimes m}\otimes\omega\right)U_\pi^\dagger:
 \pi\in S_N,\ 
 \omega\in\mathsf D\!\left((\psi^\perp)^{\otimes k}\right)
@@ -55,7 +55,7 @@ F_\psi(\Phi,\rho).
 
 The optimization even allows the processor to know $`k`$. The channel constructed below does not require that knowledge.
 
-**Theorem 1: exact dimension universality.** For every $`d\ge2`$ and $`0\le k<N/2`$,
+**Theorem 1: exact dimension universality.** For every $`d\ge2`$ and $`0\le k\lt N/2`$,
 
 ```math
 F^\star_{N,k,d}=F_N(k)

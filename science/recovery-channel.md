@@ -44,7 +44,7 @@ Its phase is irrelevant to the induced channel. Apply $`J_\lambda`$ and discard 
 
 ```math
 \Phi_\lambda(X)
-=\operatorname{Tr}_{Q_{\mu(\lambda)}^{(d)}}
+=\mathrm{Tr}_{Q_{\mu(\lambda)}^{(d)}}
 \left(J_\lambda XJ_\lambda^\dagger\right).
 ```
 
@@ -120,7 +120,7 @@ A formal Schur basis is not by itself a low-cost physical implementation. LTHC20
 
 The resource-state preparation is included in their Lemma S3.1 and in the gate count. It is not supplied as a free oracle.
 
-The construction implements a channel on an arbitrary input block. The iid assumption in the accompanying correctness bound controls the probability of a representation-sector failure event. For first-eigenstate, single-output extraction, that event is $`\lambda_1<1`$, which is impossible for every partition of $`N\ge1`$. The rule $`\mu(\lambda)`$ above therefore inherits the global implementation guarantee. On admissible inputs it always reduces to first-row removal, so the component analysis in Section 2 applies.
+The construction implements a channel on an arbitrary input block. The iid assumption in the accompanying correctness bound controls the probability of a representation-sector failure event. For first-eigenstate, single-output extraction, that event is $`\lambda_1\lt 1`$, which is impossible for every partition of $`N\ge1`$. The rule $`\mu(\lambda)`$ above therefore inherits the global implementation guarantee. On admissible inputs it always reduces to first-row removal, so the component analysis in Section 2 applies.
 
 This is a transfer of an existing channel implementation to a new input class. It uses the representation-sector action and its norm approximation, not an inference that an iid fidelity bound automatically holds for correlated inputs.
 

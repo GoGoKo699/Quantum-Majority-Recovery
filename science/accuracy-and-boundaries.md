@@ -88,7 +88,7 @@ Taking expectations proves $`\varepsilon_{N,k+1}\ge \varepsilon_{N,k}`$. The sam
 
 ## Fixed fault fraction
 
-Suppose $`k/N\to\alpha`$ for a fixed $`0<\alpha<1/2`$. Then
+Suppose $`k/N\to\alpha`$ for a fixed $`0\lt\alpha\lt1/2`$. Then
 
 ```math
 \varepsilon_{N,k}
@@ -100,7 +100,7 @@ For each fixed integer $`r`$, the bridge tail converges to
 
 ```math
 T_r\longrightarrow q^r,
-\qquad q=\frac{\alpha}{1-\alpha}<1.
+\qquad q=\frac{\alpha}{1-\alpha}\lt1.
 ```
 
 Thus $`M`$ converges to a geometric variable on $`\{0,1,\ldots\}`$ whose mean is $`q/(1-q)=\alpha/(1-2\alpha)`$. The geometric tail bound above is uniform once $`N`$ is sufficiently large. It therefore justifies passage to the expectation in
@@ -181,10 +181,10 @@ The same argument describes the transition scale. If $`g/\sqrt N\to a\in[0,\inft
 F_N(k)\longrightarrow
 \frac12+
 a\sqrt{\frac\pi8}\,e^{a^2/2}
-\operatorname{erfc}\!\left(\frac a{\sqrt2}\right).
+\mathrm{erfc}\!\left(\frac a{\sqrt2}\right).
 ```
 
-Here $`\operatorname{erfc}(z)=(2/\sqrt\pi)\int_z^\infty e^{-t^2}\,dt`$. In the Riemann sum, the limiting tail is now $`e^{-2x(x+a)}`$. This gives a positive limiting error for every finite $`a`$. Together with $`\varepsilon_{N,k}\le k/(g^2+N)`$, it follows that fidelity tends to one precisely when $`g/\sqrt N\to\infty`$. This statement concerns sequences of strict-majority instances.
+Here $`\mathrm{erfc}(z)=(2/\sqrt\pi)\int_z^\infty e^{-t^2}\,dt`$. In the Riemann sum, the limiting tail is now $`e^{-2x(x+a)}`$. This gives a positive limiting error for every finite $`a`$. Together with $`\varepsilon_{N,k}\le k/(g^2+N)`$, it follows that fidelity tends to one precisely when $`g/\sqrt N\to\infty`$. This statement concerns sequences of strict-majority instances.
 
 ## What “pure good registers” requires
 
@@ -193,8 +193,8 @@ For a fixed target $`\psi`$, let $`P_\psi=|\psi\rangle\langle\psi|`$ and $`Q_\ps
 ```math
 \rho=U_\pi\bigl(P_\psi^{\otimes m}\otimes\omega\bigr)U_\pi^\dagger,
 \qquad
-\operatorname{supp}\omega\subseteq
-\operatorname{ran}(Q_\psi)^{\otimes k}.
+\mathrm{supp}\,\omega\subseteq
+\mathrm{ran}(Q_\psi)^{\otimes k}.
 ```
 
 The permutation $`U_\pi`$ and the bad state $`\omega`$ may be unknown and classically correlated. The bad registers can be entangled with one another. If a register has a pure reduced state, it factors from the rest of the system. Thus actual pure good registers necessarily factor from the bad registers in each fixed-placement component.
@@ -221,8 +221,8 @@ F^{\mathrm{occupation}}_{N,k}=\frac mN.
 Choose one of the $`N`$ input registers uniformly and return it. For every state in the stated subspace, the resulting fidelity is
 
 ```math
-\frac1N\sum_{i=1}^{N}\operatorname{Tr}[(P_\psi)_i\rho]
-=\frac1N\operatorname{Tr}(\mathcal N_\psi\rho)
+\frac1N\sum_{i=1}^{N}\mathrm{Tr}[(P_\psi)_i\rho]
+=\frac1N\mathrm{Tr}(\mathcal N_\psi\rho)
 =\frac mN.
 ```
 

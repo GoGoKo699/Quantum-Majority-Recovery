@@ -11,7 +11,7 @@ Let $`\mathcal H=\mathbb C^d`$, let $`|\psi\rangle\in\mathcal H`$ be a unit vect
 ```math
 P_\psi=|\psi\rangle\langle\psi|,
 \qquad
-\mathcal L=\operatorname{span}\{|\psi\rangle\},
+\mathcal L=\mathrm{span}\,\{|\psi\rangle\},
 \qquad
 \mathcal K=\mathcal L^\perp.
 ```
@@ -96,12 +96,12 @@ Q_\nu^{(d-1)}\otimes V_\nu.
 Put $`D_\nu=\dim Q_\nu^{(d-1)}`$ and let $`P_\nu^{\mathcal K}`$ be the orthogonal projector onto the corresponding summand. The permutation twirl removes coherence between different $`\nu`$ and makes each $`V_\nu`$ factor maximally mixed. The unitary twirl then makes its $`Q_\nu^{(d-1)}`$ factor maximally mixed. Thus
 
 ```math
+\begin{aligned}
 \mathcal T_{\rm bad}(\omega)
-=\sum_\nu q_\nu\,\omega_\nu,
-\qquad
-q_\nu=\operatorname{Tr}(P_\nu^{\mathcal K}\omega),
-\qquad
-\omega_\nu=\frac{P_\nu^{\mathcal K}}{D_\nu f^\nu}.
+&=\sum_\nu q_\nu\,\omega_\nu,\\
+q_\nu&=\mathrm{Tr}(P_\nu^{\mathcal K}\omega),\\
+\omega_\nu&=\frac{P_\nu^{\mathcal K}}{D_\nu f^\nu}.
+\end{aligned}
 \tag{1}
 ```
 
@@ -124,10 +124,12 @@ so that $`\rho_\nu^0=P_\nu^0/(D_\nu f^\nu)`$. Let $`H=S_m\times S_k\le S_N`$ be 
 For each $`m`$-element set $`G\subseteq[N]`$, choose a permutation $`t_G`$ with $`t_G(G_0)=G`$. Invariance under $`H`$ makes $`U_{t_G}P_\nu^0U_{t_G}^\dagger`$ independent of the chosen representative. Therefore the full permutation average is
 
 ```math
+\begin{aligned}
 \overline\rho_\nu
-=\frac1{N!}\sum_{\pi\in S_N}U_\pi\rho_\nu^0U_\pi^\dagger
-=\frac1{\binom Nm D_\nu f^\nu}
+&=\frac1{N!}\sum_{\pi\in S_N}U_\pi\rho_\nu^0U_\pi^\dagger\\
+&=\frac1{\binom Nm D_\nu f^\nu}
 \sum_{|G|=m}U_{t_G}P_\nu^0U_{t_G}^\dagger.
+\end{aligned}
 \tag{2}
 ```
 
@@ -151,11 +153,13 @@ Let $`\mathcal S_\nu`$ be the direct sum of the ranges of the projectors in (2).
 As a representation of $`U(d-1)\times S_N`$, this space is
 
 ```math
+\begin{aligned}
 \mathcal S_\nu
-\cong
+&\cong
 Q_\nu^{(d-1)}\otimes
-\operatorname{Ind}_{S_m\times S_k}^{S_N}
+\mathrm{Ind}_{S_m\times S_k}^{S_N}\,
 (\mathbf1\otimes V_\nu).
+\end{aligned}
 \tag{3}
 ```
 
@@ -164,11 +168,13 @@ An explicit identification is obtained by placing a vector $`q\otimes v\in Q_\nu
 Pieri's rule now gives the multiplicity-free decomposition
 
 ```math
-\operatorname{Ind}_{S_m\times S_k}^{S_N}
+\begin{aligned}
+\mathrm{Ind}_{S_m\times S_k}^{S_N}\,
 (\mathbf1\otimes V_\nu)
-\cong
+&\cong
 \bigoplus_{\lambda:\,\lambda/\nu\text{ horizontal }m\text{-strip}}
 V_\lambda.
+\end{aligned}
 \tag{4}
 ```
 
@@ -204,9 +210,11 @@ p(\lambda\mid\nu)
 with zero probability otherwise. In particular,
 
 ```math
+\begin{aligned}
 \sum_{\lambda:\,\lambda/\nu\text{ horizontal }m\text{-strip}}
 f^\lambda
-=\binom Nm f^\nu.
+&=\binom Nm f^\nu.
+\end{aligned}
 \tag{6}
 ```
 
@@ -217,9 +225,11 @@ Conditioned on $`\lambda`$, the Weyl-module input to the recovery channel is $`\
 Consequently the fidelity for the original arbitrary fault state has the exact reduction
 
 ```math
+\begin{aligned}
 \mathcal F_\psi(\rho_{\psi,\omega})
-=\sum_\nu q_\nu
+&=\sum_\nu q_\nu
 \sum_\lambda p(\lambda\mid\nu)\,a_{\lambda,\nu}.
+\end{aligned}
 \tag{7}
 ```
 
@@ -235,10 +245,10 @@ P_\lambda
 \sum_{\pi\in S_N}\chi_\lambda(\pi^{-1})U_\pi.
 ```
 
-If $`\pi\notin H`$, then $`U_\pi`$ maps $`\mathcal E_{G_0}`$ to an orthogonal placement space. Hence $`\operatorname{Tr}(\rho_\nu^0U_\pi)=0`$. If $`\pi=(\sigma,\tau)\in S_m\times S_k`$, then
+If $`\pi\notin H`$, then $`U_\pi`$ maps $`\mathcal E_{G_0}`$ to an orthogonal placement space. Hence $`\mathrm{Tr}(\rho_\nu^0U_\pi)=0`$. If $`\pi=(\sigma,\tau)\in S_m\times S_k`$, then
 
 ```math
-\operatorname{Tr}(\rho_\nu^0U_{(\sigma,\tau)})
+\mathrm{Tr}(\rho_\nu^0U_{(\sigma,\tau)})
 =\frac{\chi_\nu(\tau)}{f^\nu}.
 ```
 
@@ -246,13 +256,13 @@ Characters of symmetric groups are real. Character orthogonality and Frobenius r
 
 ```math
 \begin{aligned}
-\operatorname{Tr}(P_\lambda\rho_\nu^0)
+\mathrm{Tr}(P_\lambda\rho_\nu^0)
 &=\frac{f^\lambda}{N!f^\nu}
 \sum_{(\sigma,\tau)\in S_m\times S_k}
 \chi_\lambda((\sigma,\tau)^{-1})\chi_\nu(\tau)\\
 &=\frac{f^\lambda m!k!}{N!f^\nu}
 \left\langle
-\operatorname{Res}_{S_m\times S_k}^{S_N}\chi_\lambda,
+\mathrm{Res}_{S_m\times S_k}^{S_N}\,\chi_\lambda,
 \mathbf1\otimes\chi_\nu
 \right\rangle\\
 &=\frac{f^\lambda}{\binom Nm f^\nu}\,c^\lambda_{(m),\nu}.
@@ -274,11 +284,11 @@ k=\sum_{i=1}^{d-1}\nu_i
 Thus $`\lambda_1\ge m`$. Define $`r=\lambda_1-m`$. Then
 
 ```math
-0\le r\le k,
-\qquad
-\lambda_2\le N-\lambda_1=k-r,
-\qquad
-\boxed{\lambda_1-\lambda_2\ge g+2r>0.}
+\begin{aligned}
+&0\le r\le k,\\
+&\lambda_2\le N-\lambda_1=k-r,\\
+&\boxed{\lambda_1-\lambda_2\ge g+2r>0.}
+\end{aligned}
 \tag{8}
 ```
 

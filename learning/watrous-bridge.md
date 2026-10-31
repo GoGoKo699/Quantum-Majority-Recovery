@@ -43,7 +43,7 @@ Unknown positions are included by applying a permutation $`U_\pi`$ to the tensor
 
 ```math
 \mathcal A_{\psi,N,k}
-=\operatorname{conv}\left\{
+=\mathrm{conv}\left\{
 U_\pi(P_\psi^{\otimes m}\otimes\omega)U_\pi^\dagger:
 \pi\in S_N,\quad
 \omega\in\mathsf D((\psi^\perp)^{\otimes k})
@@ -69,7 +69,7 @@ Complete positivity ensures that the map remains valid when the input is correla
 Watrous's channel representations make this operational. An isometry $`A`$ can embed an input into an output register and an environment, after which the environment is discarded:
 
 ```math
-\Phi(X)=\operatorname{Tr}_{E}(AXA^\dagger),
+\Phi(X)=\mathrm{Tr}_{E}(AXA^\dagger),
 \qquad A^\dagger A=I.
 ```
 
@@ -244,7 +244,7 @@ This classical calculation reproduces the two quantum branches. The next section
 
 Fix a faulty partition $`\nu`$ after the analytical twirl. Let $`D_\nu`$ be the dimension of its $`U(d-1)`$ representation. The normalized faulty block has dimension $`D_\nu f^\nu`$.
 
-Different good-position sets occupy orthogonal subspaces. If two sets differ, some register lies in $`\operatorname{span}\{\psi\}`$ for one set and in $`\psi^\perp`$ for the other. Consequently, averaging all $`\binom Nm`$ placements gives a normalized identity on a direct sum of dimension
+Different good-position sets occupy orthogonal subspaces. If two sets differ, some register lies in $`\mathrm{span}\,\{\psi\}`$ for one set and in $`\psi^\perp`$ for the other. Consequently, averaging all $`\binom Nm`$ placements gives a normalized identity on a direct sum of dimension
 
 ```math
 \binom Nm D_\nu f^\nu.
@@ -254,7 +254,7 @@ Permutations move between the placements and act within each faulty block. This 
 
 ```math
 Q_\nu^{(d-1)}\otimes
-\operatorname{Ind}_{S_m\times S_k}^{S_N}
+\mathrm{Ind}_{S_m\times S_k}^{S_N}\,
 (\mathbf1\otimes V_\nu).
 ```
 
@@ -276,7 +276,7 @@ Fix one insertion tableau $`P_0`$ of shape $`\nu`$ over letters $`1,\ldots,d-1`$
 The key restriction property is
 
 ```math
-P(w)_{<d}=P(w_{<d}).
+P(w)_{\lt d}=P(w_{\lt d}).
 ```
 
 Deleting the largest letters after insertion gives the same tableau as deleting them from the word first. During row insertion, a largest letter appends to the first row. When a smaller letter bumps a largest letter, the latter appends in the next row and does not change the insertion history of the smaller letters. This explains the restriction property; the [minimax proof](../science/minimax-proof.md) gives the induction.
