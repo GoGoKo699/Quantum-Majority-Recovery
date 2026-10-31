@@ -1,0 +1,645 @@
+{
+  "schema_version": 1,
+  "arithmetic": "exact integers and fractions; no floating point",
+  "exact_sector_checks": {
+    "N_max": 18,
+    "d_range": "2 through min(N+1, 8)",
+    "bad_irrep_cases": 1929,
+    "branches": 10142,
+    "binary_count_cases": 90,
+    "strictly_better_than_binary": 1333,
+    "examples": [
+      {
+        "N": 9,
+        "k": 3,
+        "d": 4,
+        "nu": [
+          3
+        ],
+        "risk": "421/4410",
+        "binary_risk": "421/4410"
+      },
+      {
+        "N": 9,
+        "k": 3,
+        "d": 4,
+        "nu": [
+          2,
+          1
+        ],
+        "risk": "557/9408",
+        "binary_risk": "421/4410"
+      },
+      {
+        "N": 9,
+        "k": 3,
+        "d": 4,
+        "nu": [
+          1,
+          1,
+          1
+        ],
+        "risk": "1/27",
+        "binary_risk": "421/4410"
+      }
+    ],
+    "status": "passed"
+  },
+  "direct_rsk_checks": {
+    "case_count": 8,
+    "full_words_enumerated": 336601,
+    "accepted_full_words": 1219,
+    "dimension_count_method": "explicit standard-tableau corner recursion",
+    "cases": [
+      {
+        "name": "no_faults",
+        "N": 3,
+        "m": 3,
+        "k": 0,
+        "d": 2,
+        "nu": [],
+        "fixed_bad_insertion_tableau": [],
+        "full_words_enumerated": 8,
+        "bad_words_with_fixed_tableau": 1,
+        "accepted_full_words": 1,
+        "shapes": [
+          {
+            "lambda": [
+              3
+            ],
+            "word_count": 1,
+            "probability": "1"
+          }
+        ],
+        "bridge_maximum_counts": [
+          {
+            "maximum": 0,
+            "count": 1
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "name": "binary_row",
+        "N": 7,
+        "m": 4,
+        "k": 3,
+        "d": 2,
+        "nu": [
+          3
+        ],
+        "fixed_bad_insertion_tableau": [
+          [
+            1,
+            1,
+            1
+          ]
+        ],
+        "full_words_enumerated": 128,
+        "bad_words_with_fixed_tableau": 1,
+        "accepted_full_words": 35,
+        "shapes": [
+          {
+            "lambda": [
+              7
+            ],
+            "word_count": 1,
+            "probability": "1/35"
+          },
+          {
+            "lambda": [
+              6,
+              1
+            ],
+            "word_count": 6,
+            "probability": "6/35"
+          },
+          {
+            "lambda": [
+              5,
+              2
+            ],
+            "word_count": 14,
+            "probability": "2/5"
+          },
+          {
+            "lambda": [
+              4,
+              3
+            ],
+            "word_count": 14,
+            "probability": "2/5"
+          }
+        ],
+        "bridge_maximum_counts": [
+          {
+            "maximum": 0,
+            "count": 14
+          },
+          {
+            "maximum": 1,
+            "count": 14
+          },
+          {
+            "maximum": 2,
+            "count": 6
+          },
+          {
+            "maximum": 3,
+            "count": 1
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "name": "hook_repeated_letters",
+        "N": 7,
+        "m": 4,
+        "k": 3,
+        "d": 3,
+        "nu": [
+          2,
+          1
+        ],
+        "fixed_bad_insertion_tableau": [
+          [
+            1,
+            1
+          ],
+          [
+            2
+          ]
+        ],
+        "full_words_enumerated": 2187,
+        "bad_words_with_fixed_tableau": 2,
+        "accepted_full_words": 70,
+        "shapes": [
+          {
+            "lambda": [
+              6,
+              1
+            ],
+            "word_count": 6,
+            "probability": "3/35"
+          },
+          {
+            "lambda": [
+              5,
+              2
+            ],
+            "word_count": 14,
+            "probability": "1/5"
+          },
+          {
+            "lambda": [
+              5,
+              1,
+              1
+            ],
+            "word_count": 15,
+            "probability": "3/14"
+          },
+          {
+            "lambda": [
+              4,
+              2,
+              1
+            ],
+            "word_count": 35,
+            "probability": "1/2"
+          }
+        ],
+        "bridge_maximum_counts": [
+          {
+            "maximum": 0,
+            "count": 14
+          },
+          {
+            "maximum": 1,
+            "count": 14
+          },
+          {
+            "maximum": 2,
+            "count": 6
+          },
+          {
+            "maximum": 3,
+            "count": 1
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "name": "hook_distinct_letters",
+        "N": 7,
+        "m": 4,
+        "k": 3,
+        "d": 4,
+        "nu": [
+          2,
+          1
+        ],
+        "fixed_bad_insertion_tableau": [
+          [
+            1,
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "full_words_enumerated": 16384,
+        "bad_words_with_fixed_tableau": 2,
+        "accepted_full_words": 70,
+        "shapes": [
+          {
+            "lambda": [
+              6,
+              1
+            ],
+            "word_count": 6,
+            "probability": "3/35"
+          },
+          {
+            "lambda": [
+              5,
+              2
+            ],
+            "word_count": 14,
+            "probability": "1/5"
+          },
+          {
+            "lambda": [
+              5,
+              1,
+              1
+            ],
+            "word_count": 15,
+            "probability": "3/14"
+          },
+          {
+            "lambda": [
+              4,
+              2,
+              1
+            ],
+            "word_count": 35,
+            "probability": "1/2"
+          }
+        ],
+        "bridge_maximum_counts": [
+          {
+            "maximum": 0,
+            "count": 14
+          },
+          {
+            "maximum": 1,
+            "count": 14
+          },
+          {
+            "maximum": 2,
+            "count": 6
+          },
+          {
+            "maximum": 3,
+            "count": 1
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "name": "column",
+        "N": 7,
+        "m": 4,
+        "k": 3,
+        "d": 4,
+        "nu": [
+          1,
+          1,
+          1
+        ],
+        "fixed_bad_insertion_tableau": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "full_words_enumerated": 16384,
+        "bad_words_with_fixed_tableau": 1,
+        "accepted_full_words": 35,
+        "shapes": [
+          {
+            "lambda": [
+              5,
+              1,
+              1
+            ],
+            "word_count": 15,
+            "probability": "3/7"
+          },
+          {
+            "lambda": [
+              4,
+              1,
+              1,
+              1
+            ],
+            "word_count": 20,
+            "probability": "4/7"
+          }
+        ],
+        "bridge_maximum_counts": [
+          {
+            "maximum": 0,
+            "count": 14
+          },
+          {
+            "maximum": 1,
+            "count": 14
+          },
+          {
+            "maximum": 2,
+            "count": 6
+          },
+          {
+            "maximum": 3,
+            "count": 1
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "name": "rectangle",
+        "N": 9,
+        "m": 5,
+        "k": 4,
+        "d": 3,
+        "nu": [
+          2,
+          2
+        ],
+        "fixed_bad_insertion_tableau": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "full_words_enumerated": 19683,
+        "bad_words_with_fixed_tableau": 2,
+        "accepted_full_words": 252,
+        "shapes": [
+          {
+            "lambda": [
+              7,
+              2
+            ],
+            "word_count": 27,
+            "probability": "3/28"
+          },
+          {
+            "lambda": [
+              6,
+              2,
+              1
+            ],
+            "word_count": 105,
+            "probability": "5/12"
+          },
+          {
+            "lambda": [
+              5,
+              2,
+              2
+            ],
+            "word_count": 120,
+            "probability": "10/21"
+          }
+        ],
+        "bridge_maximum_counts": [
+          {
+            "maximum": 0,
+            "count": 42
+          },
+          {
+            "maximum": 1,
+            "count": 48
+          },
+          {
+            "maximum": 2,
+            "count": 27
+          },
+          {
+            "maximum": 3,
+            "count": 8
+          },
+          {
+            "maximum": 4,
+            "count": 1
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "name": "four_box_hook",
+        "N": 9,
+        "m": 5,
+        "k": 4,
+        "d": 3,
+        "nu": [
+          3,
+          1
+        ],
+        "fixed_bad_insertion_tableau": [
+          [
+            1,
+            1,
+            2
+          ],
+          [
+            2
+          ]
+        ],
+        "full_words_enumerated": 19683,
+        "bad_words_with_fixed_tableau": 3,
+        "accepted_full_words": 378,
+        "shapes": [
+          {
+            "lambda": [
+              8,
+              1
+            ],
+            "word_count": 8,
+            "probability": "4/189"
+          },
+          {
+            "lambda": [
+              7,
+              2
+            ],
+            "word_count": 27,
+            "probability": "1/14"
+          },
+          {
+            "lambda": [
+              7,
+              1,
+              1
+            ],
+            "word_count": 28,
+            "probability": "2/27"
+          },
+          {
+            "lambda": [
+              6,
+              3
+            ],
+            "word_count": 48,
+            "probability": "8/63"
+          },
+          {
+            "lambda": [
+              6,
+              2,
+              1
+            ],
+            "word_count": 105,
+            "probability": "5/18"
+          },
+          {
+            "lambda": [
+              5,
+              3,
+              1
+            ],
+            "word_count": 162,
+            "probability": "3/7"
+          }
+        ],
+        "bridge_maximum_counts": [
+          {
+            "maximum": 0,
+            "count": 42
+          },
+          {
+            "maximum": 1,
+            "count": 48
+          },
+          {
+            "maximum": 2,
+            "count": 27
+          },
+          {
+            "maximum": 3,
+            "count": 8
+          },
+          {
+            "maximum": 4,
+            "count": 1
+          }
+        ],
+        "status": "passed"
+      },
+      {
+        "name": "three_rows",
+        "N": 9,
+        "m": 5,
+        "k": 4,
+        "d": 4,
+        "nu": [
+          2,
+          1,
+          1
+        ],
+        "fixed_bad_insertion_tableau": [
+          [
+            1,
+            2
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "full_words_enumerated": 262144,
+        "bad_words_with_fixed_tableau": 3,
+        "accepted_full_words": 378,
+        "shapes": [
+          {
+            "lambda": [
+              7,
+              1,
+              1
+            ],
+            "word_count": 28,
+            "probability": "2/27"
+          },
+          {
+            "lambda": [
+              6,
+              2,
+              1
+            ],
+            "word_count": 105,
+            "probability": "5/18"
+          },
+          {
+            "lambda": [
+              6,
+              1,
+              1,
+              1
+            ],
+            "word_count": 56,
+            "probability": "4/27"
+          },
+          {
+            "lambda": [
+              5,
+              2,
+              1,
+              1
+            ],
+            "word_count": 189,
+            "probability": "1/2"
+          }
+        ],
+        "bridge_maximum_counts": [
+          {
+            "maximum": 0,
+            "count": 42
+          },
+          {
+            "maximum": 1,
+            "count": 48
+          },
+          {
+            "maximum": 2,
+            "count": 27
+          },
+          {
+            "maximum": 3,
+            "count": 8
+          },
+          {
+            "maximum": 4,
+            "count": 1
+          }
+        ],
+        "status": "passed"
+      }
+    ],
+    "status": "passed"
+  },
+  "status": "all checks passed"
+}
